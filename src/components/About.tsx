@@ -1,21 +1,50 @@
 import "./styles/About.css";
+import { FaAws, FaJava } from "react-icons/fa";
+import {
+  SiAngular,
+  SiNodedotjs,
+  SiReact,
+  SiSpringboot,
+} from "react-icons/si";
 
 const About = () => {
   return (
     <div className="about-section" id="about">
       <div className="about-me">
-        <h3 className="title">About Me</h3>
-        <p className="para">
-          Full Stack Developer with 2+ years of experience building scalable web
-          and mobile applications using React.js, React Native, TypeScript,
-          Node.js, Java, Spring Boot, and GraphQL. Experienced in microservices
-          architecture, AWS cloud services (Lambda, SQS, S3, SES), and database
-          management with PostgreSQL, MySQL, and Prisma ORM. Skilled in
-          developing end-to-end solutions including mobile apps with Zoom SDK
-          integration, CMS platforms, and user management systems. Passionate
-          about delivering high-performance, production-ready solutions with
-          clean code and best practices.
+        <h2 className="about-heading">About Me</h2>
+        <p className="about-intro">
+          I build dependable, high-performance digital products.
         </p>
+        <p className="para">
+          I'm a Java full-stack developer with{" "}
+          <span className="about-experience">4+ years of experience</span>{" "}
+          designing, developing, testing, and deploying scalable enterprise
+          applications. My work spans Java, Spring Boot, microservices, REST
+          APIs, React.js, and Angular, supported by strong experience with SQL
+          databases, AWS, Docker, and the complete software development
+          lifecycle.
+        </p>
+        <div className="about-skills" aria-label="Core skills">
+          <span className="skill-bubble">
+            <FaJava aria-hidden="true" /> Java
+          </span>
+          <span className="skill-bubble">
+            <SiSpringboot aria-hidden="true" /> Spring Boot
+          </span>
+          <span className="skill-bubble">
+            <SiReact aria-hidden="true" /> React
+          </span>
+          <span className="skill-bubble">
+            <SiAngular aria-hidden="true" /> Angular
+          </span>
+          <span className="skill-bubble">
+            <SiNodedotjs aria-hidden="true" /> Node.js
+          </span>
+
+          <span className="skill-bubble">
+            <FaAws aria-hidden="true" /> AWS
+          </span>
+        </div>
       </div>
     </div>
   );

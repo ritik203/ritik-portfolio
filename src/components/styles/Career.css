@@ -82,6 +82,26 @@
   color: var(--accentColor);
 }
 
+.career-role {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.career-company-date {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.career-date {
+  color: color-mix(in srgb, #ffffff 55%, transparent);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
 .career-timeline {
   position: absolute;
   top: -50px;

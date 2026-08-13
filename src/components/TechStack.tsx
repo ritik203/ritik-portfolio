@@ -22,12 +22,29 @@ const imageUrls = [
   "/images/typescript.webp",
   "/images/javascript.webp",
   "/images/react-native.png",
-  "/images/android.png",
-  "/images/ios.png",
   "/images/java.png",
+  "/images/java1.png",
+  "/images/java2.png",
+  "/images/react%20(1).png",
+  "/images/react%20(2).png",
+  "/images/react%20(3).png",
+  "/images/Angular%20(1).png",
+  "/images/Angular%20(2).png",
+  "/images/Angular%20(3).png",
+  "/images/springboot.png",
+  "/images/springboot%20(2).png",
+  "/images/springboot%20(3).png",
+  "/images/docker-bubble.svg",
+  "/images/aws%20(1).png",
+  "/images/aws%20(2).png",
+  "/images/aws%20(3).png",
   "/images/postgres.png",
 ];
-const textures = imageUrls.map((url) => textureLoader.load(url));
+const textures = imageUrls.map((url) => {
+  const texture = textureLoader.load(url);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  return texture;
+});
 
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
 
@@ -160,12 +177,13 @@ const TechStack = () => {
     return textures.map(
       (texture) =>
         new THREE.MeshPhysicalMaterial({
+          color: "#ffffff",
           map: texture,
           emissive: "#ffffff",
           emissiveMap: texture,
-          emissiveIntensity: 0.3,
-          metalness: 0.5,
-          roughness: 1,
+          emissiveIntensity: 0.9,
+          metalness: 0.15,
+          roughness: 0.55,
           clearcoat: 0.1,
         }),
     );

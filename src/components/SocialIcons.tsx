@@ -1,8 +1,4 @@
-import {
-  FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa6";
+import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
@@ -84,7 +80,7 @@ const SocialIcons = () => {
       </div>
       <a
         className="resume-button"
-        href="https://drive.google.com/uc?export=download&id=1qkE8T4b7MbC_EVK9sX0ooQFDGGIrikq8"
+        href="https://drive.google.com/uc?export=download&id=1jMoFnlZ3iMu37S3sSzg1lQI-tm1SEwBg"
       >
         <HoverLinks text="RESUME" />
         <span>

@@ -6,6 +6,7 @@ import Cursor from "./Cursor";
 import Landing from "./Landing";
 import Navbar from "./Navbar";
 import SocialIcons from "./SocialIcons";
+import TechStackMobile from "./TechStackMobile";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
 import setSplitText from "./utils/splitText";
@@ -14,7 +15,7 @@ const TechStack = lazy(() => import("./TechStack"));
 
 const MainContainer = ({ children }: PropsWithChildren) => {
   const [isDesktopView, setIsDesktopView] = useState<boolean>(
-    window.innerWidth > 1024
+    () => window.innerWidth > 1024
   );
 
   useEffect(() => {
@@ -27,7 +28,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
     return () => {
       window.removeEventListener("resize", resizeHandler);
     };
-  }, [isDesktopView]);
+  }, []);
 
   return (
     <div className="container-main">
@@ -43,10 +44,12 @@ const MainContainer = ({ children }: PropsWithChildren) => {
             <WhatIDo />
             <Career />
             <Work />
-            {isDesktopView && (
+            {isDesktopView ? (
               <Suspense fallback={<div>Loading....</div>}>
                 <TechStack />
               </Suspense>
+            ) : (
+              <TechStackMobile />
             )}
             <Contact />
           </div>
